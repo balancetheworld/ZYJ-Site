@@ -1,0 +1,311 @@
+@import "../../styles/_variables.sass";
+
+
+//最外层盒子
+%viewport-full{
+  width:100vw;
+  height:100vh;
+  margin:0;
+  min-height:100vh;
+  display: relative;
+}
+.maxBox-Dark{
+  @extend %viewport-full;
+  background-color: $bg-color-dark;
+  color: $primary-color-dark;
+}
+.maxBox-Light{
+  @extend %viewport-full;
+  background-color: $bg-color-light;
+  color: $primary-color-light;
+}
+
+//主体名字
+%name-all{
+position: absolute;
+font-size: 8vw;
+font-weight: bold;
+top:30%;
+left:10%;
+}
+
+@mixin span-hover-style($hover-color){
+  span {
+    display: inline-block; 
+    transition: all 0.3s ease; 
+
+    &:hover {
+      color: $hover-color;
+      transform: translateY(-5px);
+    }
+  }
+}
+
+.name-Dark{
+  @extend %name-all;
+  background-color: $bg-color-dark;
+  color: $primary-color-dark;
+  @include span-hover-style(rgb(19, 246, 246));
+}
+.name-Light{
+ @extend %name-all;
+  background-color: $bg-color-light;
+  color: $primary-color-light;
+  @include span-hover-style(rgb(12, 189, 189));
+}
+
+
+//签名
+%signature-all{
+  margin-top:1rem;
+  margin-left:0.5rem;
+  font-size:2.5vw;
+  transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.signature-Dark{
+  @extend %signature-all;
+ color: $primary-color-dark;
+}
+.signature-Light{
+  @extend %signature-all;
+  color: $primary-color-light;
+}
+
+
+// 初始隐藏状态（左侧看不到的位置）
+.signature-hidden {
+  transform: translateX(-120vw); // 超出左侧屏幕
+  opacity: 0; // 初始透明
+}
+
+// 动画结束后的可见状态
+.signature-visible {
+  transform: translateX(0); // 回到正常位置
+  opacity: 1; // 完全显示
+  transition: 
+    transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    opacity 0.8s ease;
+}
+
+//logo部分
+%logoBox-all{
+  position: absolute;
+  top:0%;
+  left:0%;
+  width:150px;
+  height:150px;
+  
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.logoBox-Dark{
+  @extend %logoBox-all;
+  background-image: url('../../assets/images/logo.png');
+}
+.logoBox-Light{
+  @extend %logoBox-all;
+  background-image: url('../../assets/images/logo.png');
+}
+
+
+
+//start按钮
+.aboutmeBt-Dark{
+  background-color:rgba(45,45,45,.8);
+  color:#999;
+   position: absolute;
+  bottom:28vh;
+  left:10%;
+  padding:10px 20px;
+  font-size:2.7vw;
+   cursor: pointer;
+    border-radius:35px;
+    transition: 0.5s;
+    border:none;
+    overflow: hidden;
+    & span{
+      position: relative;
+      z-index:1;
+      letter-spacing: 2px;
+    }
+    &:hover{
+      color:$blue-color-dark;
+      text-shadow:0 0 4px $blue-color-dark,
+      0 0 4px $blue-color-dark;
+    }
+    &::before{
+      content: "";
+      position:absolute;
+      top:var(--y);
+      left:var(--x);
+      transform:translate(-50%,-50%);
+      width:150px;
+      height:150px;
+      background: radial-gradient($blue-color-dark, transparent, transparent);
+    opacity: 0;
+    }
+    &:hover::before{
+     
+      opacity: 1;}
+    &::after{
+      content:"";
+      background-color: rgba(45,45,45,.8);
+      position:absolute;
+      inset:2px;
+      border-radius: 35px;
+    }
+}
+
+
+.aboutmeBt-Light{
+  background-color: $blue-color-light;
+  color:rgb(245, 245, 245);
+   position: absolute;
+  bottom:28vh;
+  left:10%;
+  padding:10px 20px;
+  font-size:2.7vw;
+  border:none;
+  border-radius:35px;
+  cursor: pointer;
+  &:hover{
+    transform: scale(1.1);
+    
+    transition: all 0.3s ease;
+  }
+}
+
+
+//切换按钮部分
+.changeStyleBox{
+  position: absolute;
+  top:0%;
+  right:7%;
+  background-color: transparent;
+  width:40px;
+}
+
+.changeLine-Dark{
+  height: 40px;
+  width: 2px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color:$white-color-dark;}
+
+.changeLine-Light{
+   height: 40px;
+  width: 2px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: $black-color-light;}
+
+
+.changeButton-Dark, .changeButton-Light {
+  background-color: transparent;
+  width: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  cursor: pointer; 
+}
+
+.changeButton-Dark span{
+   color: $white-color-dark;
+  font-size: 39.5px;
+  cursor: pointer;
+
+}
+.changeButton-Light span {
+  color:$black-color-light;
+  font-size: 39.5px;
+  cursor: pointer;
+}
+
+//右侧邮箱按钮
+%emailBt-all{
+  position: absolute;
+  top:30vh;
+  right:3vw;
+  background-color: transparent;
+  text-align: center;
+  cursor: pointer; 
+  span{font-size: 3.5vw;
+    font-weight: bold
+ };
+}
+.emailBt-Dark{
+  @extend %emailBt-all;
+  span{color:$white-color-dark}
+}
+.emailBt-Light{
+  @extend %emailBt-all;
+  span{color:$black-color-light}
+}
+
+//右侧github按钮
+%githubBt-all{
+  position: absolute;
+  top:45vh;
+  right:3vw;
+  background-color: transparent;
+  text-align: center;
+  cursor: pointer; 
+  span{font-size: 3.5vw;
+    font-weight: bold
+ };
+}
+.githubBt-Dark{
+  @extend %githubBt-all;
+  span{color:$white-color-dark}
+}
+.githubBt-Light{
+  @extend %githubBt-all;
+  span{color:$black-color-light}
+}
+
+//上层导航组件部分
+@mixin nav-box-shared ($blue-color){
+  position: absolute;
+  top: 2.8vh;
+  left: 47vw;
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  
+  span {
+    font-size: 1.7vw;
+    margin: 0.5vh 1.5vw 0; // 合并margin属性
+    cursor: pointer; // 提取共用的cursor属性
+    
+  &:hover {
+      color:$blue-color
+  }
+}}
+
+// 深色模式导航
+.navBox-Dark {
+  @include nav-box-shared($blue-color-dark);
+  border-top: 1.7px solid $white-color-dark;
+}
+
+// 浅色模式导航
+.navBox-Light {
+  @include nav-box-shared($blue-color-light);
+}
+
+// 初始隐藏状态（左侧看不到的位置）
+.nav-hidden {
+  transform: translateX(15vw); // 超出左侧屏幕
+  opacity: 0; // 初始透明
+}
+
+// 动画结束后的可见状态
+.nav-visible {
+  transform: translateX(0); // 回到正常位置
+  opacity: 1; // 完全显示
+  transition: 
+    transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    opacity 0.8s ease;
+}
+
