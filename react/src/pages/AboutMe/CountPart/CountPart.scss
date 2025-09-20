@@ -1,0 +1,56 @@
+
+@import "../../../styles/_variables.sass";
+
+
+//
+%countPart-all{ 
+  position: absolute;
+  width: 60vw;
+  height: 12vh;
+  bottom:6vh;;
+  left: 14vw;
+  display:flex;
+  justify-content: space-around;
+}
+.countPart-Dark{
+  @extend %countPart-all;
+}
+
+
+%countBox-all{ 
+ display: flex;
+}
+.countBox-Dark{
+  @extend %countBox-all;
+}
+
+%numBox-all{
+font-size: 4vw;
+font-weight: bold;
+align-items: center;
+  display: flex;
+  font-family: 'Courier New', Courier, monospace;
+  color:white;
+  
+  width: 6vw;
+  display: flex;
+  justify-content: center;
+}
+
+.numBox-Dark{
+  @extend %numBox-all;
+}
+
+%textBox-all{
+  font-size: 1vw;
+  width: 6vw;
+  padding-top: 1px;
+  align-items: center;
+  display: flex;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  color:rgba(240, 255, 255, 0.7);
+}
+.textBox-Dark{
+  @extend %textBox-all;
+}
