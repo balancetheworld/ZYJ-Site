@@ -13,8 +13,8 @@ const [activeLink,setActiveLink]=useState("/aboutme");
 const ButtonList=[
   {icon:"iconfont icon-home1-copy",text:"Home",Link:"/"},
    {icon:"iconfont icon-ic_yonghu1",text:"Me",Link:"/aboutme"},
-  {icon:"iconfont icon-jishufuwu",text:"Experience",Link:"//"},
-  {icon:"iconfont icon-xiaolian",text:"Interest",Link:"///"},
+  {icon:"iconfont icon-jishufuwu",text:"Experience",Link:"/aboutme/exprience"},
+  {icon:"iconfont icon-xiaolian",text:"Interest",Link:"/aboutme/interest"},
  
 ]
 

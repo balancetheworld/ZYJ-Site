@@ -1,0 +1,20 @@
+@import "../../../../../styles/_variables.sass";
+
+.EXnavPart{
+  position: absolute;
+top:16vh;
+left:7vw;
+width: 25vw;
+height: 30vh;
+}
+
+.EXnavPart-item{
+  background-color: aquamarine;
+  width: 20vw;
+  height:5.5vh;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1vh;
+  margin-top:2vh;
+}
