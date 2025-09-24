@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 
 import "./navPart.scss"
 import "./navPartIcon/iconfont.css"
+import "./navPartIcon1/iconfont.css"
+
 
 interface AvatarProps{
   isDark:boolean;
@@ -11,14 +13,12 @@ const NavPart:React.FC<AvatarProps> = ({isDark}) => {
 const [activeLink,setActiveLink]=useState("/aboutme");
 
 const ButtonList=[
-  {icon:"iconfont icon-home1-copy",text:"Home",Link:"/"},
+  {icon:"iconfont icon-home",text:"Home",Link:"/"},
    {icon:"iconfont icon-ic_yonghu1",text:"Me",Link:"/aboutme"},
   {icon:"iconfont icon-jishufuwu",text:"Experience",Link:"/aboutme/exprience"},
   {icon:"iconfont icon-xiaolian",text:"Interest",Link:"/aboutme/interest"},
  
 ]
-
-
 
 const handleItemClick=(Link:string)=>{
   setActiveLink(Link);

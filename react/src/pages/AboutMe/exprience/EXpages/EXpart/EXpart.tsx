@@ -5,14 +5,20 @@ import { useEffect, useState, useRef, useMemo } from "react";
 const EXpart = () => {
   const EXList = useMemo(() => [
     {
-      time: "2022-05-01",
-      name: "haojiahuo",
-      introduce: "111hgaojiahuo",
-      detail: "1133333333333", 
+      time: "2005-12-14",
+      name: "Birthday",
+      introduce: "When I saw the sun for the first time.",
+      detail: "", 
+    },
+     {
+      time: "2005-12-14",
+      name: "Birthday",
+      introduce: "When I saw the sun for the first time.",
+      detail: "", 
     },
     {
-      time: "2023-05-01",
-      name: "haojiahuo",
+      time: "2012-05-01",
+      name: "",
       introduce: "111hgaojiahuo",
       detail: "111111233322111111111111111111111111111",
     },
