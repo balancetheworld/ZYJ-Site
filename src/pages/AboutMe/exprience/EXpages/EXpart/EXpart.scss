@@ -1,0 +1,148 @@
+//.EXmain{
+
+//}
+
+.EXpostion{
+  position: absolute;
+  top:18vh;
+  left: 28vw;
+  height:82vh;
+  width:72vw;
+  background-color: rgb(0, 0, 0);
+}
+.EXmain{
+ height:82vh;
+  width:72vw;
+  display:flex;
+  position:relative;
+  background-color:rgba(31, 30, 30, 0.6);
+  overflow:hidden;
+  border-radius:20px;
+}
+
+
+
+
+%iconfont{
+ width: 80px;
+  height: 80px;
+  position:absolute;
+  left:16%;
+  z-index:999;
+  font:900 80px "";
+  color:aliceblue
+}
+
+#up-btn{
+  top:5%;
+  @extend %iconfont;
+}
+#down-btn{
+  bottom:5%;
+   @extend %iconfont;
+}
+
+.content{
+  width:30%;
+  height:100%;
+  position:absolute;
+  left:9%;
+  overflow:hidden;
+}
+
+.card{
+  width:100%;
+  height:100%;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  color:white;
+  transition:transform .8s ease-in-out;
+  word-wrap: break-word;
+}
+
+.card-time{
+  font-size:2.5vw;
+  font-weight:700;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.card-name{
+  font-size:3vw;
+  padding-bottom:10px;
+  border-bottom:1px solid white;
+  margin-bottom:10px;
+  font-weight:600;
+   font-family: 'Courier New', Courier, monospace;
+}
+.card-introduce{
+  font-size:1.5vw;
+  font-weight: 500;
+   font-family: 'Courier New', Courier, monospace;
+}
+
+.card-detail{
+  font-size:1.2vw;
+   font-family: 'Courier New', Courier, monospace;
+}
+
+.clock{
+  height:130%;
+  aspect-ratio: 1/1;
+  position:absolute;
+  right:-33.5%;
+  top:-25%;
+  border-radius:50%;
+  background-color:rgba(255, 255, 255, 0.9);
+  border:rgb(211, 161, 190) 20px solid
+}
+
+@media(max-width: 768px){
+  .clock{
+    right:-90%;
+  }
+}
+
+.clock-table{
+  width:96%;
+  height:96%;
+  border-radius:50%;
+  position:absolute;
+  top:2%;
+  left:2%;
+  transition:transform .8s ease-in-out;
+}
+
+.invisible-table{
+ width:100%;
+ height:100%;
+ border-radius:50%;
+ transform-origin:50% 50%;
+ position:absolute;
+}
+
+.clock-thick{
+  width:6%;
+  height:6px;
+  background-color: #793b64;
+  position:absolute;
+  top:calc(50% - 3px);
+  left:0px;
+}
+
+.clock-thick span{
+  font-size:50px;
+  position:absolute;
+  left:140%;
+  top:calc(50% - 30px);
+  color: #793b64;
+}
+
+.clock-scale{
+  width:4%;
+  height:3px;
+  background-color:#a86793;
+  position:absolute;
+  top:calc(50% - .5px);
+  left:0px;
+}

@@ -1,0 +1,22 @@
+@import "../../styles/_variables.sass";
+
+.aboutmeBox-full{
+    width:100vw;
+    height:100vh;
+    margin:0;
+    min-height:100vh;
+    display: relative;
+}
+
+.aboutmeBox-Dark{
+    @extend .aboutmeBox-full;
+    background-color: $bg-color-dark;
+    color: $primary-color-dark;
+}
+
+.aboutmeBox-Light{
+    @extend .aboutmeBox-full;
+    background-color: $bg-color-light;
+    color: $primary-color-light;
+}
+
