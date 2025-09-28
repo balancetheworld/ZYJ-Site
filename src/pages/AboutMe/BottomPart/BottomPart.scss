@@ -1,0 +1,78 @@
+@import "../../../styles/_variables.sass";
+
+%BottomBox-all{ 
+  width: 30vw;
+  position: absolute;
+  height: 7vh;
+ 
+  bottom: 32vh;
+  left:61vh;
+  display: flex;
+align-items: center
+}
+.BottomBox-Dark{
+  @extend %BottomBox-all;
+}
+
+%CVbutton-all{ 
+  padding: 5px 15px 5px 15px;
+height: 5vh;
+background-color: transparent;
+border-radius: 2.5vh ;
+margin-right:4vh;
+font-size: 1.5vh;
+font-weight: bold;
+cursor: pointer;
+
+}
+.CVbutton-Dark{
+@extend %CVbutton-all;
+color: $primary-color-dark;
+border:solid white;
+&:hover{
+background-color: white;
+color: rgb(246, 98, 187);
+}
+}
+.CVspan{
+  padding-right: 0.8vw;
+}
+
+%btn-all{
+  height:4vh;
+  width:4vh;
+  border-radius: 50%;
+  font-size: 2vh;
+  background-color: transparent;
+border:solid white;
+display:flex;
+justify-content: center;
+align-items: center;
+border-width: 1px;
+margin-right:4vh;
+}
+.GithubBtn-Dark{
+  @extend %btn-all;
+  color: white;
+  &:hover{
+background-color: white;
+color: rgb(246, 98, 187);
+}
+}
+
+.QQBtn-Dark{
+  @extend %btn-all;
+  color: white;
+  &:hover{
+background-color: white;
+color: rgb(246, 98, 187);
+}
+}
+.SteamBtn-Dark{
+  @extend %btn-all;
+  color: white;
+  &:hover{
+background-color: white;
+color: rgb(246, 98, 187);
+}
+}

@@ -1,0 +1,37 @@
+@import "../../../../styles/_variables.sass";
+
+.fallingBox {
+    position: absolute;
+    top:26vh;
+    right:5vw;
+    width: 28vw;
+    height:28vh;
+    /* 添加Flexbox属性 */
+    display: flex;
+    flex-wrap: wrap; /* 允许换行 */
+    font-size: 0; /* 可选，进一步消除可能的间隙 */
+    overflow: hidden;
+    background-image: url('./fallingboxImg/EasterEeg1.png');
+    background-position:center;
+    background-size:24vh 24vh;
+    background-repeat:no-repeat;
+}
+.box {
+    width:1vw;
+    height:1vw;
+    background-color: rgb(0, 0, 0);
+    border:0px solid #000;
+}
+.boxactive {
+    background-color:rgba(211, 161, 190,0.6); // 示例，可根据需要修改
+    animation:falling 2s linear forwards;   
+}
+
+@keyframes falling {
+    from {
+        transform: translateY(0) rotate(0deg);
+    }
+    to{
+        transform: translateY(28vh) rotate(360deg);
+    }
+}

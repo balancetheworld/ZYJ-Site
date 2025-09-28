@@ -1,0 +1,31 @@
+@import "../../../../../styles/_variables.sass";
+
+.EXnavPart{
+  position: absolute;
+top:18vh;
+left:7vw;
+width: 25vw;
+height: 30vh;
+}
+
+.EXnavPart-item{
+  background-color: $primary-color-dark;
+  color:white;
+  width: 16vw;
+  height:5.5vh;
+  display:flex;
+  font-weight:600;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1vh;
+  margin-top:2vh;
+   transition: background-color 0.3s ease, color 0.3s ease, width 0.3s ease;
+}
+
+.active1{
+background-color: rgb(116, 246, 246);
+color:black;
+ width: 18vw;
+  height:5.5vh;
+  font-size: 1.2vw;
+}

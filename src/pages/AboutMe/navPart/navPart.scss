@@ -1,0 +1,112 @@
+@import "../../../styles/_variables.sass";
+
+.navPart {
+    position: absolute;
+    top:2.5vh;
+    right:0vw;
+}
+
+.navPart-all { 
+    position: relative;
+    width: 400px;
+    height:70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.navPart-Dark { 
+    @extend .navPart-all;
+}
+
+ul{
+    display:flex;
+    width:350px;
+    padding:0;
+}
+
+li {
+    list-style: none;
+    position:relative;
+    width:80px;
+    height:70px;
+    z-index:1;
+}
+
+li a {
+    position:relative;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width:100%;
+    text-align:center;
+    font-weight: 500;
+}
+
+.icon {
+    position:relative;
+    display: block;
+    line-height: 75px;
+    font-size:1.5px;
+    text-align:center;
+    transition: 0.5s;
+}
+
+li.active .icon {
+    transform: translateY(-16px);
+    color:$primary-color-dark;
+}
+
+.text {
+    position:absolute;
+    font-weight:400;
+    font-size:1vw;
+    letter-spacing:0.05em;
+    transition:0.5s;
+    opacity:0;
+    transform: translateY(10px);
+}
+
+li.active .text {
+    opacity:1;
+    transform: translateY(2px);
+    color:$primary-color-dark;
+}
+
+li:nth-child(1).active~.indicator {
+    --x: 0;
+}
+
+li:nth-child(2).active~.indicator {
+    --x:calc(70px);
+}
+li:nth-child(3).active~.indicator {
+    --x:calc(140px);
+}
+
+Link, a {
+    text-decoration: none;
+    color: inherit; 
+}
+
+.icon, .text {
+    color:rgb(255, 255, 255);
+}
+
+.iconfont.icon-home {
+    font-size: 33px;
+}
+
+.iconfont.icon-jishufuwu {
+    font-size: 30px;
+}
+
+.iconfont.icon-xiaolian {
+    font-size: 30px;
+}
+
+.iconfont.icon-ic_yonghu1 {
+    font-size: 30px;
+}
